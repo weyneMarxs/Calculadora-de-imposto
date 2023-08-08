@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ptbr">
+<html lang="br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,8 +12,31 @@
       <h1>Enviar arquivo XML</h1>
       <form id="xmlForm">
         <input type="file" id="xmlFile" accept=".xml" placeholder="teste" />
+        <input
+          type="number"
+          placeholder="ICMS"
+          id="icmsBase"
+          list="icmsList"
+          value="19"
+          min="1"
+          max="22"
+        />
         <input type="submit" value="Enviar" />
       </form>
+      <datalist id="icmsList">
+        <option value="19">Bahia</option>
+        <option value="19">Alagoas</option>
+        <option value="19">Pará</option>
+        <option value="19">Acre</option>
+        <option value="19">Paraná</option>
+        <option value="20">Maranhão</option>
+        <option value="20">Rio Grande do Norte</option>
+        <option value="20">Tocantins</option>
+        <option value="20">Amazonas</option>
+        <option value="20">Roraima</option>
+        <option value="21">Piauí</option>
+        <option value="22">Sergipe</option>
+      </datalist>
       <hr />
       <h2>Dados do XML:</h2>
       <div id="xmlData"></div>
