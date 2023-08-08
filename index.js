@@ -20,6 +20,8 @@ document.getElementById('xmlForm').addEventListener('submit', function (event) {
       xmlDataDiv.innerHTML = '' // Limpa os dados anteriores
 
       const dets = xmlDoc.getElementsByTagName('det')
+      const emits = xmlDoc.getElementsByTagName('emit')
+
       const table = document.createElement('table')
       const headerRow = table.insertRow()
       const prodHeader = headerRow.insertCell()
@@ -27,11 +29,25 @@ document.getElementById('xmlForm').addEventListener('submit', function (event) {
       const icmsHeader = headerRow.insertCell()
       const vProdHeader = headerRow.insertCell()
       const finalPriceHeader = headerRow.insertCell()
+
       prodHeader.textContent = 'Produto'
       ncmHeader.textContent = 'NCM'
       icmsHeader.textContent = 'ICMS'
       vProdHeader.textContent = 'Valor Unitário'
       finalPriceHeader.textContent = 'Valor Final c/ Imposto'
+
+      for (const emit of emits) {
+        const supplieDate = document.getElementById('suppleiDate')
+        supplieDate.innerHTML = ''
+
+        const xNome = emit.getElementsByTagName('xNome')[0].textContent
+        const cnpj = emit.getElementsByTagName('CNPJ')[0].textContent
+
+        const createDate = document.createElement('p')
+        createDate.textContent = `Fornecedor : ${xNome} | CNPJ: ${cnpj}`
+
+        supplieDate.appendChild(createDate)
+      }
 
       for (const det of dets) {
         const xProd = det.getElementsByTagName('xProd')[0].textContent
