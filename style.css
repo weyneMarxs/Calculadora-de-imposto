@@ -27,6 +27,12 @@ form {
   align-items: center;
   margin-bottom: 12px;
 }
+form input[type='submit'] {
+  margin-left: 4px;
+}
+form label {
+  font-size: 11px;
+}
 #xmlFile {
   width: 100%;
 }
