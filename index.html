@@ -11,7 +11,13 @@
     <div class="container">
       <h1>Enviar arquivo XML</h1>
       <form id="xmlForm">
-        <input type="file" id="xmlFile" accept=".xml" placeholder="teste" />
+        <input
+          type="file"
+          id="xmlFile"
+          accept=".xml"
+          placeholder="selecionar arquivo XML"
+        />
+        <label for="icmsBase">Escolha o estado do Icms base</label>
         <input
           type="number"
           placeholder="ICMS"
@@ -24,22 +30,26 @@
         <input type="submit" value="Enviar" />
       </form>
       <datalist id="icmsList">
-        <option value="19">Bahia</option>
-        <option value="19">Alagoas</option>
-        <option value="19">Pará</option>
-        <option value="19">Acre</option>
-        <option value="19">Paraná</option>
-        <option value="20">Maranhão</option>
-        <option value="20">Rio Grande do Norte</option>
-        <option value="20">Tocantins</option>
-        <option value="20">Amazonas</option>
-        <option value="20">Roraima</option>
-        <option value="21">Piauí</option>
-        <option value="22">Sergipe</option>
+        <option value="19">Bahia - 19%</option>
+        <option value="19">Alagoas - 19%</option>
+        <option value="19">Pará - 19%</option>
+        <option value="19">Acre - 19%</option>
+        <option value="19">Paraná - 19%</option>
+        <option value="20">Maranhão - 20%</option>
+        <option value="20">Rio Grande do Norte - 20%</option>
+        <option value="20">Tocantins - 20%</option>
+        <option value="20">Amazonas - 20%</option>
+        <option value="20">Roraima - 20%</option>
+        <option value="21">Piauí - 21%</option>
+        <option value="22">Sergipe - 22%</option>
       </datalist>
       <hr />
-      <h2>Dados do XML:</h2>
+      <h2>Dados do XML :</h2>
+      <div id="suppleiDate"></div>
       <div id="xmlData"></div>
+      <footer>
+        ©️ <strong>WeyneTech</strong> - Todos os direitos Reservados - 2023
+      </footer>
     </div>
 
     <script src="index.js"></script>
