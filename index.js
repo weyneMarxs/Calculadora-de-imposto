@@ -1,6 +1,8 @@
+// let baseIcmsTest = document.getElementById('icmsBase').value
+let baseIcms = document.getElementById('icmsBase')
+let valueIcms = parseFloat(baseIcms.value)
+
 // Função para lidar com o envio do formulário
-const baseIcms = 19
-const baseCost = 35
 document.getElementById('xmlForm').addEventListener('submit', function (event) {
   event.preventDefault() // Impede o comportamento padrão de envio do formulário
 
@@ -56,7 +58,10 @@ document.getElementById('xmlForm').addEventListener('submit', function (event) {
 
           xmlDataDiv.appendChild(table)
         } else {
-          const differenceIcms = baseIcms - parseFloat(icms)
+          let baseIcms = document.getElementById('icmsBase')
+          let valueIcms = parseFloat(baseIcms.value)
+
+          const differenceIcms = valueIcms - parseFloat(icms)
 
           const priceIcms =
             (parseFloat(vProd) * parseFloat(icms)) / 100 + parseFloat(vProd)
@@ -74,7 +79,6 @@ document.getElementById('xmlForm').addEventListener('submit', function (event) {
           vProdCell.textContent = parseFloat(vProd)
           finalPriceCell.textContent = Math.round(finalPrice).toFixed(2)
           xmlDataDiv.appendChild(table)
-          // xmlDataDiv.appendChild(table)
         }
       }
     }
