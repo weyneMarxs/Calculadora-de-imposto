@@ -5,6 +5,7 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
+
 }
 .container {
   max-width: 1000px;
@@ -49,6 +50,8 @@ form label {
   white-space: nowrap;
   background-color: white;
 }
+table {
+}
 table td,
 table th {
   text-align: center;
@@ -60,7 +63,7 @@ table tbody tr:first-child {
 }
 table td {
   border-right: 4px solid #f8f8f8;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 table thead th {
@@ -69,14 +72,13 @@ table thead th {
 }
 
 table tr:nth-child(even) {
-  background: #f8f8f8f8;
+  background: #d7d7d7;
 }
 
 footer {
   font-size: 12px;
   text-align: center;
-  bottom: 0;
-  left: 0;
-  position: fixed;
   width: 100%;
+  justify-content: end;
+  margin-top:45%;
 }
